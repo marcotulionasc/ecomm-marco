@@ -292,19 +292,46 @@ export async function getProductsByCollection(
   first: number = 20,
   cursor?: string
 ) {
-  const response = await shopifyClient.query<{ collection: Collection }>(
+  const response = await shopifyClient.query<{ collection: any }>(
     GET_PRODUCTS_BY_COLLECTION_QUERY,
     { handle, first, after: cursor }
   );
-  return response.data.collection;
+  
+  const collection = response.data.collection;
+  
+  if (!collection) return null;
+  
+  return {
+    ...collection,
+    products: {
+      ...collection.products,
+      edges: collection.products.edges.map((edge: any) => ({
+        ...edge,
+        node: {
+          ...edge.node,
+          variants: edge.node.variants.edges.map((vEdge: any) => vEdge.node),
+          images: edge.node.images.edges.map((iEdge: any) => iEdge.node),
+        }
+      }))
+    }
+  };
 }
 
 export async function getProductByHandle(handle: string) {
-  const response = await shopifyClient.query<{ product: Product }>(
+  const response = await shopifyClient.query<{ product: any }>(
     GET_PRODUCT_BY_HANDLE_QUERY,
     { handle }
   );
-  return response.data.product;
+  
+  const product = response.data.product;
+  
+  if (!product) return null;
+  
+  return {
+    ...product,
+    variants: product.variants.edges.map((edge: any) => edge.node),
+    images: product.images.edges.map((edge: any) => edge.node),
+  };
 }
 
 export async function searchProducts(
@@ -312,9 +339,22 @@ export async function searchProducts(
   first: number = 20,
   cursor?: string
 ) {
-  const response = await shopifyClient.query<{ products: { edges: Array<{ node: Product; cursor: string }>; pageInfo: any } }>(
+  const response = await shopifyClient.query<{ products: any }>(
     SEARCH_PRODUCTS_QUERY,
     { query, first, after: cursor }
   );
-  return response.data.products;
+  
+  const products = response.data.products;
+  
+  return {
+    ...products,
+    edges: products.edges.map((edge: any) => ({
+      ...edge,
+      node: {
+        ...edge.node,
+        variants: edge.node.variants.edges.map((vEdge: any) => vEdge.node),
+        images: edge.node.images.edges.map((iEdge: any) => iEdge.node),
+      }
+    }))
+  };
 }

@@ -22,7 +22,7 @@ export default function SearchPage() {
 
     try {
       const result = await searchProducts(query.trim(), 20);
-      setProducts(result.edges.map(edge => edge.node));
+      setProducts(result.edges.map((edge: any) => edge.node));
     } catch (error) {
       console.error('Search error:', error);
       setProducts([]);

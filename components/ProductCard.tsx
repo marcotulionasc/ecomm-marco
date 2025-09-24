@@ -9,7 +9,7 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
-  const firstImage = product.images.edges[0]?.node;
+  const firstImage = product.images[0];
   const priceRange = product.priceRange;
 
   return (

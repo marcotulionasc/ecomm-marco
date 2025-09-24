@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
-import { validateEnv } from '@ecomm/core';
+import { validateEnv } from '@/lib/config/env';
 import { logger } from '@/lib/logger';
 import crypto from 'crypto';
 

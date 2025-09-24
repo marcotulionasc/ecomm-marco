@@ -4,6 +4,7 @@ import { getProductByHandle } from '@/lib/shopify/queries';
 import { AddToCartButton } from '@/components/AddToCartButton';
 import { Price } from '@/components/Price';
 import { Badge } from '@/components/ui/badge';
+import type { Image as ShopifyImage } from '@/lib/types/shopify';
 
 interface ProductPageProps {
   params: {
@@ -20,8 +21,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
     notFound();
   }
 
-  const firstVariant = product.variants.edges[0]?.node;
-  const firstImage = product.images.edges[0]?.node;
+  const firstVariant = product.variants[0];
+  const firstImage = product.images[0];
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -40,9 +41,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </div>
           )}
           
-          {product.images.edges.length > 1 && (
+          {product.images.length > 1 && (
             <div className="grid grid-cols-4 gap-2">
-              {product.images.edges.slice(1, 5).map(({ node: image }) => (
+              {product.images.slice(1, 5).map((image: ShopifyImage) => (
                 <div key={image.id} className="relative aspect-square overflow-hidden rounded-md">
                   <Image
                     src={image.url}
@@ -75,7 +76,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               
               {product.tags.length > 0 && (
                 <div className="flex flex-wrap gap-2">
-                  {product.tags.map((tag) => (
+                  {product.tags.map((tag: string) => (
                     <Badge key={tag} variant="secondary">
                       {tag}
                     </Badge>
@@ -94,11 +95,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
           {product.options.length > 0 && (
             <div className="space-y-4">
-              {product.options.map((option) => (
+              {product.options.map((option: any) => (
                 <div key={option.id}>
                   <h3 className="text-lg font-semibold mb-2">{option.name}</h3>
                   <div className="flex flex-wrap gap-2">
-                    {option.values.map((value) => (
+                    {option.values.map((value: string) => (
                       <button
                         key={value}
                         className="px-3 py-1 border rounded-md hover:bg-muted"
