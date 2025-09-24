@@ -18,20 +18,26 @@ export function Header() {
               E-commerce Store
             </span>
           </Link>
-          <nav className="flex items-center space-x-6 text-sm font-medium">
-            <Link
-              href="/"
-              className="transition-colors hover:text-foreground/80 text-foreground"
-            >
-              Home
-            </Link>
-            <Link
-              href="/buscar"
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-            >
-              Buscar
-            </Link>
-          </nav>
+              <nav className="flex items-center space-x-6 text-sm font-medium">
+                <Link
+                  href="/"
+                  className="transition-colors hover:text-foreground/80 text-foreground"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/colecoes"
+                  className="transition-colors hover:text-foreground/80 text-foreground/60"
+                >
+                  Coleções
+                </Link>
+                <Link
+                  href="/buscar"
+                  className="transition-colors hover:text-foreground/80 text-foreground/60"
+                >
+                  Buscar
+                </Link>
+              </nav>
         </div>
         <Sheet>
           <SheetTrigger asChild>
@@ -48,20 +54,26 @@ export function Header() {
               <span className="font-bold">E-commerce Store</span>
             </Link>
             <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-              <div className="flex flex-col space-y-2">
-                <Link
-                  href="/"
-                  className="text-foreground/60 transition-colors hover:text-foreground"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/buscar"
-                  className="text-foreground/60 transition-colors hover:text-foreground"
-                >
-                  Buscar
-                </Link>
-              </div>
+                  <div className="flex flex-col space-y-2">
+                    <Link
+                      href="/"
+                      className="text-foreground/60 transition-colors hover:text-foreground"
+                    >
+                      Home
+                    </Link>
+                    <Link
+                      href="/colecoes"
+                      className="text-foreground/60 transition-colors hover:text-foreground"
+                    >
+                      Coleções
+                    </Link>
+                    <Link
+                      href="/buscar"
+                      className="text-foreground/60 transition-colors hover:text-foreground"
+                    >
+                      Buscar
+                    </Link>
+                  </div>
             </div>
           </SheetContent>
         </Sheet>

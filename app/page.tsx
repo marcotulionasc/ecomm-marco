@@ -1,4 +1,4 @@
-import { getCollections } from '@/lib/shopify/queries';
+import { getCollections, searchProducts } from '@/lib/shopify/queries';
 import { HeroSection } from '@/components/HeroSection';
 import { BentoGrid, BentoGridItem } from '@/components/magic/bento-grid';
 import { BlurFade } from '@/components/magic/blur-fade';
@@ -8,11 +8,15 @@ import { ParallaxBanner } from '@/components/ParallaxBanner';
 import { ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Badge } from '@/components/ui/badge';
+import { Price } from '@/components/Price';
 
-export const revalidate = 300;
+export const revalidate = 60;
 
 export default async function HomePage() {
   const collections = await getCollections(6);
+  const productsResult = await searchProducts('*', 6);
+  const featuredProducts = productsResult.edges.map((edge: any) => edge.node);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -22,22 +26,22 @@ export default async function HomePage() {
         <div className="container mx-auto">
           <BlurFade>
             <h2 className="text-3xl font-bold text-center mb-12">
-              Coleções em Destaque
+              Produtos em Destaque
             </h2>
           </BlurFade>
           <BentoGrid className="max-w-7xl mx-auto">
-            {collections.slice(0, 6).map((collection, index) => (
+            {featuredProducts.slice(0, 6).map((product, index) => (
               <BentoGridItem
-                key={collection.id}
-                title={collection.title}
-                description={collection.description}
+                key={product.id}
+                title={product.title}
+                description={product.description}
                 header={
-                  <Link href={`/colecao/${collection.handle}`} className="block">
+                  <Link href={`/produto/${product.handle}`} className="block">
                     <div className="relative aspect-square overflow-hidden rounded-lg">
-                      {collection.image ? (
+                      {product.images[0] ? (
                         <Image
-                          src={collection.image.url}
-                          alt={collection.image.altText || collection.title}
+                          src={product.images[0].url}
+                          alt={product.images[0].altText || product.title}
                           fill
                           className="object-cover transition-transform group-hover/bento:scale-110"
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -47,10 +51,21 @@ export default async function HomePage() {
                           <ShoppingBag className="h-12 w-12 text-muted-foreground" />
                         </div>
                       )}
+                      {product.variants[0] && (
+                        <div className="absolute bottom-2 left-2">
+                          <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
+                            <Price 
+                              price={product.variants[0].price} 
+                              compareAtPrice={product.variants[0].compareAtPrice}
+                              className="text-xs"
+                            />
+                          </Badge>
+                        </div>
+                      )}
                     </div>
                   </Link>
                 }
-                className={index === 3 || index === 6 ? 'md:col-span-2' : ''}
+                className={index === 2 || index === 5 ? 'md:col-span-2' : ''}
               />
             ))}
           </BentoGrid>

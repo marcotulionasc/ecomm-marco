@@ -12,7 +12,7 @@ interface ProductPageProps {
   };
 }
 
-export const revalidate = 300;
+export const revalidate = 60;
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const product = await getProductByHandle(params.handle);
