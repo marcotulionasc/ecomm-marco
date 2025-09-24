@@ -1,0 +1,36 @@
+{
+  "name": "ecomm-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspace @ecomm/web dev",
+    "build": "yarn workspace @ecomm/web build",
+    "start": "yarn workspace @ecomm/web start",
+    "lint": "yarn workspaces run lint",
+    "typecheck": "yarn workspaces run typecheck",
+    "clean": "yarn workspaces run clean"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.0"
+  },
+  "packageManager": "yarn@4.0.0",
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-separator": "^1.1.7",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "@radix-ui/react-toast": "^1.2.15",
+    "@radix-ui/react-toggle": "^1.1.10",
+    "@radix-ui/react-tooltip": "^1.2.8",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.19",
+    "next-themes": "^0.4.6",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}
