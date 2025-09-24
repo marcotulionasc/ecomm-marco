@@ -1,4 +1,4 @@
-import type { ThemeTokens } from '@ecomm/core';
+import type { ThemeTokens } from '@/lib/types/tenant';
 
 export const defaultTokens: ThemeTokens = {
   colors: {

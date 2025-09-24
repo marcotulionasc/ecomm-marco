@@ -17,7 +17,7 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
     notFound();
   }
 
-  const products = collection.products.edges.map(edge => edge.node);
+  const products = collection.products.edges.map((edge: any) => edge.node);
 
   return (
     <div className="container mx-auto px-4 py-8 space-y-8">
