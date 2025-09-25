@@ -69,8 +69,8 @@ export function FeaturedCategories() {
           CATEGORIAS EM DESTAQUE
         </motion.h2>
 
-        <div className="relative">
-          <div className="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+        <div className="flex justify-center">
+          <div className="flex space-x-4 max-w-4xl">
             {categories.map((category, index) => (
               <motion.div
                 key={category.id}
@@ -92,14 +92,6 @@ export function FeaturedCategories() {
               </motion.div>
             ))}
           </div>
-
-          <motion.button
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-300"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <ChevronRight className="w-6 h-6 text-gray-600" />
-          </motion.button>
         </div>
       </div>
     </section>
