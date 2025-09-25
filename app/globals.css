@@ -24,6 +24,21 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+    
+    --furniro-gold: #B88E2F;
+    --furniro-text-dark: #333333;
+    --furniro-text-medium: #666666;
+    --furniro-text-secondary: #3A3A3A;
+    --furniro-text-muted: #616161;
+    --furniro-text-light: #9F9F9F;
+    --furniro-text-lighter: #B0B0B0;
+    --furniro-bg-light: #F4F4F4;
+    --furniro-bg-section: #F4F5F7;
+    --furniro-bg-warm: #FCF8F3;
+    --furniro-new: #2EC1AC;
+    --furniro-sale: #E97171;
+    --furniro-hero-bg: #44AEE8;
+    --furniro-hero-card: #FFF3E3;
   }
 
   .dark {
@@ -54,7 +69,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
   }
 }
 

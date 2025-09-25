@@ -17,6 +17,10 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -50,6 +54,22 @@ const config: Config = {
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
+        },
+        furniro: {
+          gold: 'var(--furniro-gold)',
+          'text-dark': 'var(--furniro-text-dark)',
+          'text-medium': 'var(--furniro-text-medium)',
+          'text-secondary': 'var(--furniro-text-secondary)',
+          'text-muted': 'var(--furniro-text-muted)',
+          'text-light': 'var(--furniro-text-light)',
+          'text-lighter': 'var(--furniro-text-lighter)',
+          'bg-light': 'var(--furniro-bg-light)',
+          'bg-section': 'var(--furniro-bg-section)',
+          'bg-warm': 'var(--furniro-bg-warm)',
+          new: 'var(--furniro-new)',
+          sale: 'var(--furniro-sale)',
+          'hero-bg': 'var(--furniro-hero-bg)',
+          'hero-card': 'var(--furniro-hero-card)',
         },
       },
       borderRadius: {

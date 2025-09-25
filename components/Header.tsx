@@ -1,98 +1,120 @@
 'use client';
 
+import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { Search, ShoppingCart, Menu } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Menu, Search, User, ShoppingCart } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { ThemeToggle } from '@/components/theme-toggle';
-import { MiniCart } from '@/components/MiniCart';
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const menuItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Shop', href: '/shop' },
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: '/contact' },
+  ];
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <div className="mr-4 hidden md:flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="hidden font-bold sm:inline-block">
-              E-commerce Store
-            </span>
+    <header className="bg-white h-[100px] flex items-center justify-between px-4 sm:px-6 lg:px-10 max-w-screen-xl mx-auto w-full">
+      <div className="flex items-center gap-2">
+        <Image
+          src="/logo.png"
+          alt="Furniro Logo"
+          width={50}
+          height={32}
+          className="object-contain"
+        />
+        <span className="font-montserrat font-bold text-[34px] text-black">
+          Furniro
+        </span>
+      </div>
+
+      <nav className="hidden md:flex items-center space-x-8">
+        {menuItems.map((item) => (
+          <Link
+            key={item.label}
+            href={item.href}
+            className="font-poppins font-medium text-[16px] text-black hover:text-furniro-gold hover:underline transition-colors ease-out"
+          >
+            {item.label}
           </Link>
-              <nav className="flex items-center space-x-6 text-sm font-medium">
-                <Link
-                  href="/"
-                  className="transition-colors hover:text-foreground/80 text-foreground"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/colecoes"
-                  className="transition-colors hover:text-foreground/80 text-foreground/60"
-                >
-                  Coleções
-                </Link>
-                <Link
-                  href="/buscar"
-                  className="transition-colors hover:text-foreground/80 text-foreground/60"
-                >
-                  Buscar
-                </Link>
-              </nav>
-        </div>
-        <Sheet>
+        ))}
+      </nav>
+
+      <div className="hidden md:flex items-center space-x-6">
+        <button
+          aria-label="Menu"
+          className="hover:text-furniro-gold transition-colors ease-out"
+        >
+          <Menu size={24} />
+        </button>
+        <button
+          aria-label="Search"
+          className="hover:text-furniro-gold transition-colors ease-out"
+        >
+          <Search size={24} />
+        </button>
+        <button
+          aria-label="User account"
+          className="hover:text-furniro-gold transition-colors ease-out"
+        >
+          <User size={24} />
+        </button>
+        <button
+          aria-label="Shopping cart"
+          className="hover:text-furniro-gold transition-colors ease-out"
+        >
+          <ShoppingCart size={24} />
+        </button>
+      </div>
+
+      <div className="md:hidden">
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
-            <Button
-              variant="ghost"
-              className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+            <button
+              aria-label="Open menu"
+              className="hover:text-furniro-gold transition-colors ease-out"
             >
-              <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle Menu</span>
-            </Button>
+              <Menu size={24} />
+            </button>
           </SheetTrigger>
-          <SheetContent side="left" className="pr-0">
-            <Link href="/" className="flex items-center">
-              <span className="font-bold">E-commerce Store</span>
-            </Link>
-            <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-                  <div className="flex flex-col space-y-2">
-                    <Link
-                      href="/"
-                      className="text-foreground/60 transition-colors hover:text-foreground"
-                    >
-                      Home
-                    </Link>
-                    <Link
-                      href="/colecoes"
-                      className="text-foreground/60 transition-colors hover:text-foreground"
-                    >
-                      Coleções
-                    </Link>
-                    <Link
-                      href="/buscar"
-                      className="text-foreground/60 transition-colors hover:text-foreground"
-                    >
-                      Buscar
-                    </Link>
-                  </div>
-            </div>
+          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <nav className="flex flex-col space-y-6 mt-8">
+              {menuItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="font-poppins font-medium text-[16px] text-black hover:text-furniro-gold transition-colors ease-out"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <div className="flex items-center space-x-6 pt-6 border-t">
+                <button
+                  aria-label="Search"
+                  className="hover:text-furniro-gold transition-colors ease-out"
+                >
+                  <Search size={24} />
+                </button>
+                <button
+                  aria-label="User account"
+                  className="hover:text-furniro-gold transition-colors ease-out"
+                >
+                  <User size={24} />
+                </button>
+                <button
+                  aria-label="Shopping cart"
+                  className="hover:text-furniro-gold transition-colors ease-out"
+                >
+                  <ShoppingCart size={24} />
+                </button>
+              </div>
+            </nav>
           </SheetContent>
         </Sheet>
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          <div className="w-full flex-1 md:w-auto md:flex-none">
-            <div className="relative">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder="Buscar produtos..."
-                className="pl-8 md:w-[100px] lg:w-[300px]"
-              />
-            </div>
-          </div>
-          <nav className="flex items-center space-x-2">
-            <ThemeToggle />
-            <MiniCart />
-          </nav>
-        </div>
       </div>
     </header>
   );
