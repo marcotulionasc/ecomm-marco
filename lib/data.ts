@@ -15,88 +15,88 @@ export interface Product {
 export const products: Product[] = [
   {
     id: '1',
-    name: 'Syltherine',
-    subtitle: 'Stylish cafe chair',
-    price: 'Rp 2.500.000',
-    originalPrice: 'Rp 3.500.000',
+    name: 'Sofá Moderno',
+    subtitle: 'Cadeira de escritório elegante',
+    price: 'R$ 2.500,00',
+    originalPrice: 'R$ 3.500,00',
     badge: {
       type: 'sale',
       text: '-30%'
     },
-    imageSrc: '/products/syltherine.jpg'
+    imageSrc: 'https://via.placeholder.com/285x301/8B5CF6/A3E635?text=SOFA+MODERNO'
   },
   {
     id: '2',
-    name: 'Leviosa',
-    subtitle: 'Stylish cafe chair',
-    price: 'Rp 2.500.000',
+    name: 'Mesa de Centro',
+    subtitle: 'Mesa de centro contemporânea',
+    price: 'R$ 1.200,00',
     hasOverlay: true,
-    imageSrc: '/products/leviosa.jpg'
+    imageSrc: 'https://via.placeholder.com/285x301/A3E635/8B5CF6?text=MESA+CENTRO'
   },
   {
     id: '3',
-    name: 'Lolito',
-    subtitle: 'Luxury big sofa',
-    price: 'Rp 7.000.000',
-    originalPrice: 'Rp 14.000.000',
+    name: 'Poltrona Luxo',
+    subtitle: 'Poltrona de luxo grande',
+    price: 'R$ 4.500,00',
+    originalPrice: 'R$ 6.000,00',
     badge: {
       type: 'sale',
-      text: '-50%'
+      text: '-25%'
     },
-    imageSrc: '/products/lolito.jpg'
+    imageSrc: 'https://via.placeholder.com/285x301/8B5CF6/A3E635?text=POLTRONA+LUXO'
   },
   {
     id: '4',
-    name: 'Respira',
-    subtitle: 'Outdoor bar table and stool',
-    price: 'Rp 500.000',
+    name: 'Mesa Jantar',
+    subtitle: 'Mesa de jantar e banqueta',
+    price: 'R$ 3.200,00',
     badge: {
       type: 'new',
-      text: 'New'
+      text: 'Novo'
     },
-    imageSrc: '/products/respira.jpg'
+    imageSrc: 'https://via.placeholder.com/285x301/A3E635/8B5CF6?text=MESA+JANTAR'
   },
   {
     id: '5',
-    name: 'Grifo',
-    subtitle: 'Night lamp',
-    price: 'Rp 1.500.000',
-    imageSrc: '/products/grifo.jpg'
+    name: 'Luminária LED',
+    subtitle: 'Luminária de mesa moderna',
+    price: 'R$ 450,00',
+    imageSrc: 'https://via.placeholder.com/285x301/8B5CF6/A3E635?text=LUMINARIA+LED'
   },
   {
     id: '6',
-    name: 'Muggo',
-    subtitle: 'Small mug',
-    price: 'Rp 150.000',
+    name: 'Cadeira Gamer',
+    subtitle: 'Cadeira gamer ergonômica',
+    price: 'R$ 1.800,00',
     badge: {
       type: 'new',
-      text: 'New'
+      text: 'Novo'
     },
-    imageSrc: '/products/muggo.jpg'
+    imageSrc: 'https://via.placeholder.com/285x301/A3E635/8B5CF6?text=CADEIRA+GAMER'
   },
   {
     id: '7',
-    name: 'Pingky',
-    subtitle: 'Cute bed set',
-    price: 'Rp 7.000.000',
-    originalPrice: 'Rp 14.000.000',
+    name: 'Conjunto Quarto',
+    subtitle: 'Conjunto de quarto completo',
+    price: 'R$ 5.500,00',
+    originalPrice: 'R$ 7.200,00',
     badge: {
       type: 'sale',
-      text: '-50%'
+      text: '-24%'
     },
     hasOverlay: true,
-    imageSrc: '/products/pingky.jpg'
+    imageSrc: 'https://via.placeholder.com/285x301/8B5CF6/A3E635?text=CONJUNTO+QUARTO'
   },
   {
     id: '8',
-    name: 'Potty',
-    subtitle: 'Minimalist flower pot',
-    price: 'Rp 500.000',
+    name: 'Vaso Decorativo',
+    subtitle: 'Vaso minimalista moderno',
+    price: 'R$ 180,00',
     badge: {
       type: 'new',
-      text: 'New'
+      text: 'Novo'
     },
-    imageSrc: '/products/potty.jpg'
+    imageSrc: 'https://via.placeholder.com/285x301/A3E635/8B5CF6?text=VASO+DECORATIVO'
   }
 ];
 
@@ -110,21 +110,21 @@ export interface CategoryTile {
 export const categoryTiles: CategoryTile[] = [
   {
     id: '1',
-    name: 'Dining',
-    imageSrc: '/categories/dining.jpg',
-    bgColor: '#111111'
+    name: 'Sala de Jantar',
+    imageSrc: 'https://via.placeholder.com/381x480/8B5CF6/A3E635?text=SALA+JANTAR',
+    bgColor: '#8B5CF6'
   },
   {
     id: '2',
-    name: 'Living',
-    imageSrc: '/categories/living.jpg',
-    bgColor: '#F2F5FF'
+    name: 'Sala de Estar',
+    imageSrc: 'https://via.placeholder.com/381x480/A3E635/8B5CF6?text=SALA+ESTAR',
+    bgColor: '#A3E635'
   },
   {
     id: '3',
-    name: 'Bedroom',
-    imageSrc: '/categories/bedroom.jpg',
-    bgColor: '#F4F4F4'
+    name: 'Quarto',
+    imageSrc: 'https://via.placeholder.com/381x480/8B5CF6/A3E635?text=QUARTO',
+    bgColor: '#8B5CF6'
   }
 ];
 

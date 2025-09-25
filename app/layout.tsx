@@ -18,8 +18,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Furniro',
-  description: 'Discover Our New Collection',
+  title: 'Leva Ecom',
+  description: 'Descubra Nossa Nova Coleção de Móveis Modernos',
 };
 
 export default function RootLayout({
