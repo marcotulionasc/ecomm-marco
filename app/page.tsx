@@ -13,7 +13,6 @@ export default function HomePage() {
       <PromotionalBanner />
       <DailyOffers />
       <Benefits />
-      <Stats />
       <CategoryTiles />
       <ProductsGrid />
       <RoomsInspiration />

@@ -5,7 +5,7 @@ import { ArrowRight, Zap, Truck, Percent } from 'lucide-react';
 
 export function PromotionalBanner() {
   return (
-    <section className="relative bg-gradient-to-r from-leva-primary via-purple-600 to-leva-secondary overflow-hidden">
+    <section className="relative bg-leva-primary overflow-hidden">
       <div className="absolute inset-0 bg-black/10" />
       
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-10 py-16">
@@ -121,7 +121,7 @@ export function PromotionalBanner() {
                 transition={{ delay: 0.8, duration: 0.6 }}
                 whileHover={{ y: -10 }}
               >
-                <div className="w-full h-32 bg-gradient-to-r from-leva-primary/10 to-leva-secondary/10 rounded-xl mb-4 flex items-center justify-center">
+                <div className="w-full h-32 bg-leva-primary/10 rounded-xl mb-4 flex items-center justify-center">
                   <span className="text-leva-primary font-bold text-sm">KIT 3 CAMISETAS</span>
                 </div>
                 <div className="space-y-2">
