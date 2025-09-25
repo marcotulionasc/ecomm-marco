@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Share2, Repeat, Heart, ShoppingCart, Star, Eye, Zap, TrendingUp } from 'lucide-react';
+import { Share2, Repeat, Heart, ShoppingCart, Star, Eye, Zap, TrendingUp, Truck } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { products } from '@/lib/data';
 
@@ -17,10 +17,10 @@ export function ProductsGrid() {
           viewport={{ once: true }}
         >
           <h2 className="font-poppins font-bold text-4xl text-leva-primary mb-4">
-            Nossos Produtos
+            Nossas Camisetas
           </h2>
           <p className="font-poppins font-normal text-xl text-leva-text-medium max-w-2xl mx-auto">
-            Descubra nossa seleção premium de móveis modernos e elegantes
+            Descubra nossa seleção premium de camisetas com design único e qualidade excepcional
           </p>
         </motion.div>
         
@@ -28,12 +28,12 @@ export function ProductsGrid() {
           {products.map((product, index) => (
             <motion.div 
               key={product.id} 
-              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
+              className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -5 }}
             >
               <div className="relative">
                 <Image
@@ -46,19 +46,16 @@ export function ProductsGrid() {
                 
                 {product.badge && (
                   <motion.div 
-                    className={`absolute top-4 right-4 w-14 h-14 rounded-full flex items-center justify-center text-white font-poppins font-bold text-sm shadow-lg ${
-                      product.badge.type === 'sale' ? 'bg-leva-sale' : 'bg-leva-new'
-                    }`}
+                    className="absolute top-4 left-4 bg-blue-600 text-white font-poppins font-bold text-xs px-3 py-1 rounded-lg shadow-lg"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.5 + index * 0.1 }}
                   >
-                    {product.badge.type === 'sale' ? <TrendingUp size={16} /> : <Zap size={16} />}
-                    <span className="ml-1">{product.badge.text}</span>
+                    OFERTA DO DIA
                   </motion.div>
                 )}
                 
-                <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center">
                     <Eye size={18} className="text-leva-primary" />
                   </div>
@@ -106,12 +103,12 @@ export function ProductsGrid() {
                 )}
               </div>
               
-              <div className="p-6 h-[180px] flex flex-col justify-between">
+              <div className="p-5 h-[220px] flex flex-col justify-between">
                 <div>
                   <h3 className="font-poppins font-bold text-xl text-leva-text-secondary mb-2">
                     {product.name}
                   </h3>
-                  <p className="font-poppins font-medium text-base text-leva-text-muted mb-3">
+                  <p className="font-poppins font-medium text-sm text-leva-text-muted mb-3 line-clamp-2">
                     {product.subtitle}
                   </p>
                   
@@ -125,21 +122,40 @@ export function ProductsGrid() {
                   </div>
                 </div>
                 
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4">
-                    <span className="font-poppins font-bold text-xl text-leva-primary">
-                      {product.price}
-                    </span>
-                    {product.originalPrice && (
-                      <span className="font-poppins font-normal text-base text-leva-text-lighter line-through">
-                        {product.originalPrice}
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      {product.originalPrice && (
+                        <span className="font-poppins font-normal text-sm text-leva-text-lighter line-through">
+                          {product.originalPrice}
+                        </span>
+                      )}
+                      <span className="font-poppins font-bold text-2xl text-leva-primary">
+                        {product.price}
                       </span>
-                    )}
+                    </div>
+                    
+                    <button className="w-10 h-10 bg-leva-bg-light rounded-full flex items-center justify-center hover:bg-leva-primary hover:text-white transition-colors duration-300">
+                      <Heart size={18} />
+                    </button>
                   </div>
                   
-                  <button className="w-10 h-10 bg-leva-bg-light rounded-full flex items-center justify-center hover:bg-leva-primary hover:text-white transition-colors duration-300">
-                    <Heart size={18} />
-                  </button>
+                  {product.badge && (
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2">
+                        <span className="font-poppins font-bold text-sm text-green-600">
+                          {product.badge.text} OFF
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div className="flex items-center space-x-2 text-green-600">
+                    <Truck className="w-4 h-4" />
+                    <span className="font-poppins font-semibold text-sm">
+                      Frete grátis ⚡ FULL
+                    </span>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -158,7 +174,7 @@ export function ProductsGrid() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Ver Mais Produtos
+            Ver Mais Camisetas
           </motion.button>
         </motion.div>
       </div>

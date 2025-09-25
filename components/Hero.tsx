@@ -37,7 +37,7 @@ export function Hero() {
             transition={{ delay: 0.3, duration: 0.6 }}
           >
             <span className="font-poppins font-semibold text-sm tracking-widest text-white bg-leva-secondary px-4 py-2 rounded-full">
-              NOVA CHEGADA
+              NOVA COLEÇÃO
             </span>
           </motion.div>
           
@@ -54,8 +54,8 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
             >
-              Descubra Nossa<br />
-              Nova Coleção
+              Camisetas que<br />
+              Expressam Você
             </motion.h1>
             
             <motion.p 
@@ -64,7 +64,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9, duration: 0.6 }}
             >
-              Móveis modernos e elegantes para transformar sua casa em um espaço único e acolhedor. Qualidade premium com design contemporâneo.
+              Descubra nossa coleção exclusiva de camisetas com design único, qualidade premium e conforto incomparável. Estilo que combina com sua personalidade.
             </motion.p>
             
             <motion.button 
@@ -75,7 +75,7 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>COMPRAR AGORA</span>
+              <span>VER COLEÇÃO</span>
               <ArrowRight size={20} />
             </motion.button>
             

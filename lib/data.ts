@@ -15,88 +15,88 @@ export interface Product {
 export const products: Product[] = [
   {
     id: '1',
-    name: 'Sofá Moderno',
-    subtitle: 'Cadeira de escritório elegante',
-    price: 'R$ 2.500,00',
-    originalPrice: 'R$ 3.500,00',
+    name: 'Camiseta Básica',
+    subtitle: 'Camiseta 100% algodão com corte moderno e conforto premium',
+    price: 'R$ 49,90',
+    originalPrice: 'R$ 79,90',
     badge: {
       type: 'sale',
-      text: '-30%'
+      text: '38'
     },
-    imageSrc: 'https://via.placeholder.com/285x301/8B5CF6/A3E635?text=SOFA+MODERNO'
+    imageSrc: 'https://via.placeholder.com/285x301/8B5CF6/A3E635?text=CAMISETA+BASICA'
   },
   {
     id: '2',
-    name: 'Mesa de Centro',
-    subtitle: 'Mesa de centro contemporânea',
-    price: 'R$ 1.200,00',
+    name: 'Camiseta Oversized',
+    subtitle: 'Camiseta oversized com estampa exclusiva e tecido macio',
+    price: 'R$ 69,90',
     hasOverlay: true,
-    imageSrc: 'https://via.placeholder.com/285x301/A3E635/8B5CF6?text=MESA+CENTRO'
+    imageSrc: 'https://via.placeholder.com/285x301/A3E635/8B5CF6?text=CAMISETA+OVERSIZED'
   },
   {
     id: '3',
-    name: 'Poltrona Luxo',
-    subtitle: 'Poltrona de luxo grande',
-    price: 'R$ 4.500,00',
-    originalPrice: 'R$ 6.000,00',
+    name: 'Camiseta Premium',
+    subtitle: 'Camiseta premium com acabamento diferenciado e durabilidade',
+    price: 'R$ 89,90',
+    originalPrice: 'R$ 129,90',
     badge: {
       type: 'sale',
-      text: '-25%'
+      text: '31'
     },
-    imageSrc: 'https://via.placeholder.com/285x301/8B5CF6/A3E635?text=POLTRONA+LUXO'
+    imageSrc: 'https://via.placeholder.com/285x301/8B5CF6/A3E635?text=CAMISETA+PREMIUM'
   },
   {
     id: '4',
-    name: 'Mesa Jantar',
-    subtitle: 'Mesa de jantar e banqueta',
-    price: 'R$ 3.200,00',
+    name: 'Camiseta Estampada',
+    subtitle: 'Camiseta com estampa exclusiva e design único',
+    price: 'R$ 59,90',
     badge: {
       type: 'new',
       text: 'Novo'
     },
-    imageSrc: 'https://via.placeholder.com/285x301/A3E635/8B5CF6?text=MESA+JANTAR'
+    imageSrc: 'https://via.placeholder.com/285x301/A3E635/8B5CF6?text=CAMISETA+ESTAMPADA'
   },
   {
     id: '5',
-    name: 'Luminária LED',
-    subtitle: 'Luminária de mesa moderna',
-    price: 'R$ 450,00',
-    imageSrc: 'https://via.placeholder.com/285x301/8B5CF6/A3E635?text=LUMINARIA+LED'
+    name: 'Camiseta Minimalista',
+    subtitle: 'Camiseta minimalista com foco no conforto e simplicidade',
+    price: 'R$ 39,90',
+    imageSrc: 'https://via.placeholder.com/285x301/8B5CF6/A3E635?text=CAMISETA+MINIMALISTA'
   },
   {
     id: '6',
-    name: 'Cadeira Gamer',
-    subtitle: 'Cadeira gamer ergonômica',
-    price: 'R$ 1.800,00',
+    name: 'Camiseta Streetwear',
+    subtitle: 'Camiseta streetwear com design urbano e atitude',
+    price: 'R$ 79,90',
     badge: {
       type: 'new',
       text: 'Novo'
     },
-    imageSrc: 'https://via.placeholder.com/285x301/A3E635/8B5CF6?text=CADEIRA+GAMER'
+    imageSrc: 'https://via.placeholder.com/285x301/A3E635/8B5CF6?text=CAMISETA+STREETWEAR'
   },
   {
     id: '7',
-    name: 'Conjunto Quarto',
-    subtitle: 'Conjunto de quarto completo',
-    price: 'R$ 5.500,00',
-    originalPrice: 'R$ 7.200,00',
+    name: 'Kit 3 Camisetas',
+    subtitle: 'Kit com 3 camisetas básicas em cores diferentes',
+    price: 'R$ 119,90',
+    originalPrice: 'R$ 179,90',
     badge: {
       type: 'sale',
-      text: '-24%'
+      text: '33'
     },
     hasOverlay: true,
-    imageSrc: 'https://via.placeholder.com/285x301/8B5CF6/A3E635?text=CONJUNTO+QUARTO'
+    imageSrc: 'https://via.placeholder.com/285x301/8B5CF6/A3E635?text=KIT+3+CAMISETAS'
   },
   {
     id: '8',
-    name: 'Vaso Decorativo',
-    subtitle: 'Vaso minimalista moderno',
-    price: 'R$ 180,00',
+    name: 'Camiseta Vintage',
+    subtitle: 'Camiseta com estilo vintage e acabamento envelhecido',
+    price: 'R$ 65,90',
     badge: {
       type: 'new',
       text: 'Novo'
     },
-    imageSrc: 'https://via.placeholder.com/285x301/A3E635/8B5CF6?text=VASO+DECORATIVO'
+    imageSrc: 'https://via.placeholder.com/285x301/A3E635/8B5CF6?text=CAMISETA+VINTAGE'
   }
 ];
 
@@ -110,20 +110,20 @@ export interface CategoryTile {
 export const categoryTiles: CategoryTile[] = [
   {
     id: '1',
-    name: 'Sala de Jantar',
-    imageSrc: 'https://via.placeholder.com/381x480/8B5CF6/A3E635?text=SALA+JANTAR',
+    name: 'Básicas',
+    imageSrc: 'https://via.placeholder.com/381x480/8B5CF6/A3E635?text=CAMISETAS+BASICAS',
     bgColor: '#8B5CF6'
   },
   {
     id: '2',
-    name: 'Sala de Estar',
-    imageSrc: 'https://via.placeholder.com/381x480/A3E635/8B5CF6?text=SALA+ESTAR',
+    name: 'Estampadas',
+    imageSrc: 'https://via.placeholder.com/381x480/A3E635/8B5CF6?text=CAMISETAS+ESTAMPADAS',
     bgColor: '#A3E635'
   },
   {
     id: '3',
-    name: 'Quarto',
-    imageSrc: 'https://via.placeholder.com/381x480/8B5CF6/A3E635?text=QUARTO',
+    name: 'Premium',
+    imageSrc: 'https://via.placeholder.com/381x480/8B5CF6/A3E635?text=CAMISETAS+PREMIUM',
     bgColor: '#8B5CF6'
   }
 ];

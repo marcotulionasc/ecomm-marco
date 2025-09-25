@@ -23,7 +23,7 @@ export function Header() {
           <div className="flex items-center justify-center space-x-8 text-sm">
             <div className="flex items-center space-x-2">
               <Truck className="w-4 h-4" />
-              <span>Frete Grátis acima de R$ 299</span>
+              <span>Frete Grátis acima de R$ 99</span>
             </div>
             <div className="flex items-center space-x-2">
               <Shield className="w-4 h-4" />
@@ -31,7 +31,7 @@ export function Header() {
             </div>
             <div className="flex items-center space-x-2">
               <Award className="w-4 h-4" />
-              <span>Garantia de Qualidade</span>
+              <span>Qualidade Premium</span>
             </div>
           </div>
         </div>

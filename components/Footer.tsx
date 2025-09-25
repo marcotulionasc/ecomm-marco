@@ -22,7 +22,7 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-leva-primary" />
                 <address className="font-poppins font-normal text-base text-leva-text-muted not-italic">
-                  Rua dos Móveis Modernos, 123<br />
+                  Rua da Moda, 123<br />
                   Centro, São Paulo - SP 01234-567
                 </address>
               </div>

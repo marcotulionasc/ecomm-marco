@@ -3,14 +3,14 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight, Home, Utensils, Bed } from 'lucide-react';
+import { ArrowRight, Shirt, Palette, Crown } from 'lucide-react';
 import { categoryTiles } from '@/lib/data';
 
 export function CategoryTiles() {
   const categoryIcons = {
-    'Sala de Jantar': Utensils,
-    'Sala de Estar': Home,
-    'Quarto': Bed
+    'Básicas': Shirt,
+    'Estampadas': Palette,
+    'Premium': Crown
   };
 
   return (
@@ -27,7 +27,7 @@ export function CategoryTiles() {
             Explore Nossas Categorias
           </h2>
           <p className="font-poppins font-normal text-xl text-leva-text-medium max-w-2xl mx-auto">
-            Descubra móveis incríveis para cada ambiente da sua casa. Qualidade premium com design moderno.
+            Descubra camisetas incríveis para cada estilo e ocasião. Qualidade premium com design único.
           </p>
         </motion.div>
         
@@ -53,7 +53,7 @@ export function CategoryTiles() {
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
                 <div className="absolute top-6 left-6">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                    {React.createElement(categoryIcons[tile.name as keyof typeof categoryIcons] || Home, {
+                    {React.createElement(categoryIcons[tile.name as keyof typeof categoryIcons] || Shirt, {
                       className: "w-6 h-6 text-white"
                     })}
                   </div>

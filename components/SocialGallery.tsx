@@ -16,13 +16,13 @@ export function SocialGallery() {
           viewport={{ once: true }}
         >
           <p className="font-poppins font-semibold text-2xl text-leva-text-muted mb-4">
-            Compartilhe seu ambiente com
+            Compartilhe seu look com
           </p>
           <h2 className="font-poppins font-bold text-4xl text-leva-primary">
             #LevaEcom
           </h2>
           <p className="font-poppins font-medium text-lg text-leva-text-medium max-w-2xl mx-auto mt-4">
-            Inspire-se com os ambientes criados por nossos clientes usando nossos móveis
+            Inspire-se com os looks criados por nossos clientes usando nossas camisetas
           </p>
         </motion.div>
         
@@ -95,7 +95,7 @@ export function SocialGallery() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Compartilhar Seu Ambiente
+            Compartilhar Seu Look
           </motion.button>
         </motion.div>
       </div>

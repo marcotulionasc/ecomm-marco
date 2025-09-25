@@ -8,7 +8,7 @@ export function Benefits() {
     {
       icon: Truck,
       title: 'Frete Grátis',
-      description: 'Acima de R$ 299 em todo o Brasil',
+      description: 'Acima de R$ 99 em todo o Brasil',
       color: 'text-leva-primary'
     },
     {
@@ -19,8 +19,8 @@ export function Benefits() {
     },
     {
       icon: Award,
-      title: 'Garantia',
-      description: '1 ano de garantia em todos os produtos',
+      title: 'Qualidade Premium',
+      description: '100% algodão e acabamento perfeito',
       color: 'text-leva-primary'
     },
     {

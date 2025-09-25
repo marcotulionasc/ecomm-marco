@@ -43,12 +43,12 @@ export function RoomsInspiration() {
           viewport={{ once: true }}
         >
           <h2 className="font-poppins font-bold text-4xl leading-tight text-leva-primary">
-            50+ Ambientes<br />
+            50+ Looks<br />
             Inspiradores
           </h2>
           
           <p className="font-poppins font-medium text-lg text-leva-text-muted max-w-lg leading-relaxed">
-            Nossos designers criaram diversos ambientes lindos e inspiradores para transformar sua casa em um espaço único e acolhedor.
+            Nossos stylists criaram diversos looks incríveis e inspiradores para você se destacar em qualquer ocasião.
           </p>
           
           <motion.button 
@@ -56,7 +56,7 @@ export function RoomsInspiration() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Explorar Mais
+            Ver Looks
           </motion.button>
         </motion.div>
         
