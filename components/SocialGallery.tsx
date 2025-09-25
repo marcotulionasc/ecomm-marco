@@ -6,7 +6,7 @@ import { socialImages } from '@/lib/data';
 
 export function SocialGallery() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-10 bg-gradient-to-b from-white to-leva-bg-light">
+    <section className="py-20 px-4 sm:px-6 lg:px-10 bg-white">
       <div className="max-w-screen-xl mx-auto">
         <motion.div 
           className="text-center mb-16"
@@ -15,13 +15,13 @@ export function SocialGallery() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <p className="font-poppins font-semibold text-[24px] text-leva-text-muted mb-4">
+          <p className="font-poppins font-semibold text-2xl text-leva-text-muted mb-4">
             Compartilhe seu ambiente com
           </p>
-          <h2 className="font-poppins font-bold text-[48px] bg-gradient-to-r from-leva-primary to-leva-secondary bg-clip-text text-transparent">
+          <h2 className="font-poppins font-bold text-4xl text-leva-primary">
             #LevaEcom
           </h2>
-          <p className="font-poppins font-medium text-[18px] text-leva-text-medium max-w-2xl mx-auto mt-4">
+          <p className="font-poppins font-medium text-lg text-leva-text-medium max-w-2xl mx-auto mt-4">
             Inspire-se com os ambientes criados por nossos clientes usando nossos móveis
           </p>
         </motion.div>
@@ -54,19 +54,19 @@ export function SocialGallery() {
                 }}
               />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4">
+                <div className="bg-white/95 rounded-xl p-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-gradient-to-r from-leva-primary to-leva-secondary rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-leva-primary rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-sm">L</span>
                     </div>
                     <div>
-                      <p className="font-poppins font-semibold text-[14px] text-leva-text-secondary">
+                      <p className="font-poppins font-semibold text-sm text-leva-text-secondary">
                         Cliente Leva Ecom
                       </p>
-                      <p className="font-poppins font-medium text-[12px] text-leva-text-muted">
+                      <p className="font-poppins font-medium text-xs text-leva-text-muted">
                         @levaecom
                       </p>
                     </div>
@@ -91,7 +91,7 @@ export function SocialGallery() {
           viewport={{ once: true }}
         >
           <motion.button 
-            className="bg-gradient-to-r from-leva-primary to-leva-secondary text-white font-poppins font-bold text-[18px] px-12 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-leva-primary/50 focus:ring-offset-2"
+            className="bg-leva-primary text-white font-poppins font-bold text-lg px-12 py-4 rounded-lg shadow-lg hover:bg-leva-primary/90 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-leva-primary/30"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

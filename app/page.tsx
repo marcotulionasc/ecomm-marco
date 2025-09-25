@@ -1,4 +1,6 @@
 import { Hero } from '@/components/Hero';
+import { Benefits } from '@/components/Benefits';
+import { Stats } from '@/components/Stats';
 import { CategoryTiles } from '@/components/CategoryTiles';
 import { ProductsGrid } from '@/components/ProductsGrid';
 import { RoomsInspiration } from '@/components/RoomsInspiration';
@@ -8,6 +10,8 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Hero />
+      <Benefits />
+      <Stats />
       <CategoryTiles />
       <ProductsGrid />
       <RoomsInspiration />

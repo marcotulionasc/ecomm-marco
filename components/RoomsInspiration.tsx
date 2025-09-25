@@ -33,7 +33,7 @@ export function RoomsInspiration() {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-leva-bg-warm via-yellow-50 to-leva-bg-warm py-20 px-4 sm:px-6 lg:px-10">
+    <section className="bg-leva-bg-warm py-20 px-4 sm:px-6 lg:px-10">
       <div className="max-w-screen-xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <motion.div 
           className="space-y-8"
@@ -42,17 +42,17 @@ export function RoomsInspiration() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-poppins font-bold text-[48px] leading-[56px] bg-gradient-to-r from-leva-primary to-leva-secondary bg-clip-text text-transparent">
+          <h2 className="font-poppins font-bold text-4xl leading-tight text-leva-primary">
             50+ Ambientes<br />
             Inspiradores
           </h2>
           
-          <p className="font-poppins font-medium text-[18px] text-leva-text-muted max-w-[400px] leading-relaxed">
+          <p className="font-poppins font-medium text-lg text-leva-text-muted max-w-lg leading-relaxed">
             Nossos designers criaram diversos ambientes lindos e inspiradores para transformar sua casa em um espaço único e acolhedor.
           </p>
           
           <motion.button 
-            className="bg-gradient-to-r from-leva-primary to-leva-secondary text-white font-poppins font-bold text-[18px] px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-leva-primary/50 focus:ring-offset-2"
+            className="bg-leva-primary text-white font-poppins font-bold text-lg px-10 py-4 rounded-lg shadow-lg hover:bg-leva-primary/90 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-leva-primary/30"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -86,23 +86,23 @@ export function RoomsInspiration() {
                 />
                 
                 <motion.div 
-                  className="absolute bottom-6 left-6 w-[240px] h-[140px] bg-white/90 backdrop-blur-md rounded-2xl p-6 flex flex-col justify-between shadow-lg"
+                  className="absolute bottom-6 left-6 w-[240px] h-[140px] bg-white/95 rounded-2xl p-6 flex flex-col justify-between shadow-lg"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                 >
                   <div className="flex items-center space-x-2">
-                    <span className="font-poppins font-bold text-[16px] text-leva-primary">
+                    <span className="font-poppins font-bold text-base text-leva-primary">
                       {slides[activeSlide].number}
                     </span>
-                    <span className="font-poppins font-medium text-[16px] text-leva-text-muted">
+                    <span className="font-poppins font-medium text-base text-leva-text-muted">
                       —
                     </span>
-                    <span className="font-poppins font-medium text-[16px] text-leva-text-muted">
+                    <span className="font-poppins font-medium text-base text-leva-text-muted">
                       {slides[activeSlide].title}
                     </span>
                   </div>
-                  <h3 className="font-poppins font-bold text-[28px] text-leva-text-secondary">
+                  <h3 className="font-poppins font-bold text-2xl text-leva-text-secondary">
                     {slides[activeSlide].subtitle}
                   </h3>
                 </motion.div>
@@ -110,7 +110,7 @@ export function RoomsInspiration() {
             </AnimatePresence>
             
             <motion.button 
-              className="absolute bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-leva-primary to-leva-secondary rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+              className="absolute bottom-6 right-6 w-14 h-14 bg-leva-primary rounded-full flex items-center justify-center shadow-lg hover:bg-leva-primary/90 transition-all duration-300"
               onClick={() => setActiveSlide((prev) => (prev + 1) % slides.length)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
